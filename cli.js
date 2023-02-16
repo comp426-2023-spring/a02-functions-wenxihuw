@@ -41,10 +41,11 @@ if (args.j) {
 
 const precipitation_hours = data.daily.precipitation_hours[day];
 
+let phrase = precipitation_hours === 0 ? "won't" : "might";
 if (day == 0) {
-  console.log(`You ${precipitation_hours === 0 ? "won't" : "might"} need your galoshes today.`)
+  console.log(`You ${phrase} need your galoshes today.`)
 } else if (day > 1) {
-  console.log(`You ${precipitation_hours === 0 ? "won't" : "might"} need your galoshes in ${day} days.`)
+  console.log(`You ${phrase} need your galoshes in ${day} days.`)
 } else {
-  console.log(`You ${precipitation_hours === 0 ? "won't" : "might"} need your galoshes tomorrow.`)
+  console.log(`You ${phrase} need your galoshes tomorrow.`)
 }
