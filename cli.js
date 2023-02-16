@@ -41,6 +41,7 @@ if (args.j) {
 
 // const days = day;
 // const precipitation_hours = data.daily.precipitation_hours[days];
+
 const precipitation_hours = data.daily.precipitation_hours[day];
 
 if (day == 0) {
