@@ -21,7 +21,7 @@ const timezone = args.z || moment.tz.guess();
 const latitude = args.n || -args.s;
 const longitude = args.e || -args.w;
 var day;
-if (args.d){
+if (args.d != null){
     day = args.d;
 }else{
     day = 1;
