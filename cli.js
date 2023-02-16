@@ -39,13 +39,14 @@ if (args.j) {
     process.exit(0);
 }
 
-const days = day;
-const precipitation_hours = data.daily.precipitation_hours[days];
+// const days = day;
+// const precipitation_hours = data.daily.precipitation_hours[days];
+const precipitation_hours = data.daily.precipitation_hours[day];
 
-if (days == 0) {
+if (day == 0) {
   console.log(`You ${precipitation_hours === 0 ? "won't" : "might"} need your galoshes today.`)
-} else if (days > 1) {
-  console.log(`You ${precipitation_hours === 0 ? "won't" : "might"} need your galoshes in ${days} days.`)
+} else if (day > 1) {
+  console.log(`You ${precipitation_hours === 0 ? "won't" : "might"} need your galoshes in ${day} days.`)
 } else {
   console.log(`You ${precipitation_hours === 0 ? "won't" : "might"} need your galoshes tomorrow.`)
 }
